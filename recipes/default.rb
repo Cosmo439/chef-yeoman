@@ -1,5 +1,3 @@
-include_recipe "nodejs::install_from_binary"
-
 execute "Install yeoman" do
   command "npm install -g yo"
   not_if "npm -g ls 2> /dev/null | grep '^│ └─┬ yeoman-generator'"
